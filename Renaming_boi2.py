@@ -10,6 +10,7 @@ for i in os.listdir():
     
     if Fext == ".avi":  #This will make the code look for any files with given extension.
         spaces = Fname.count(" ") #count the number of spaces in name before splitting it
+        
         if (spaces == 10):
             Fhow, Fi, Fmet, Fyour, Fmother, Fseason, Fsnr, Fepisode, Fenr, Fdash, FepName = Fname.split(" ") #Will split text for all dots it finds.
             Ftitle = "{} {} {} {} {}".format(Fhow, Fi, Fmet,Fyour, Fmother)
@@ -17,6 +18,7 @@ for i in os.listdir():
             FeName = "{}".format(FepName)
             new_name = "{}-{} {}{}".format(Ftitle, FsNReNR, FepName, Fext)#example: Dexter - S01E03.1080P.BluRay.x264.mp4
             os.rename(i, new_name)
+            
         if (spaces == 11):
             Fhow, Fi, Fmet, Fyour, Fmother, Fseason, Fsnr, Fepisode, Fenr, Fdash, FepName, FepName1 = Fname.split(" ")
             Ftitle = "{} {} {} {} {}".format(Fhow, Fi, Fmet,Fyour, Fmother)
@@ -24,6 +26,7 @@ for i in os.listdir():
             FeName = "{} {}".format(FepName, FepName1)
             new_name = "{}-{} {}{}".format(Ftitle, FsNReNR, FeName, Fext)
             os.rename(i, new_name)
+        
         if (spaces == 12):
             Fhow, Fi, Fmet, Fyour, Fmother, Fseason, Fsnr, Fepisode, Fenr, Fdash, FepName, FepName1, FepName2 = Fname.split(" ")
             Ftitle = "{} {} {} {} {}".format(Fhow, Fi, Fmet,Fyour, Fmother)
@@ -31,6 +34,7 @@ for i in os.listdir():
             FeName = "{} {} {}".format(FepName, FepName1, FepName2)
             new_name = "{}-{} {}{}".format(Ftitle, FsNReNR, FeName,Fext)
             os.rename(i, new_name)
+        
         if (spaces == 13):
             Fhow, Fi, Fmet, Fyour, Fmother, Fseason, Fsnr, Fepisode, Fenr, Fdash, FepName, FepName1, FepName2, FepName3 = Fname.split(" ")
             Ftitle = "{} {} {} {} {}".format(Fhow, Fi, Fmet,Fyour, Fmother)
@@ -38,6 +42,7 @@ for i in os.listdir():
             FeName = "{} {} {} {}".format(FepName, FepName1, FepName2, FepName3)
             new_name = "{}-{} {}{}".format(Ftitle, FsNReNR, FeName, Fext)
             os.rename(i, new_name)
+        
         if (spaces == 14):
             Fhow, Fi, Fmet, Fyour, Fmother, Fseason, Fsnr, Fepisode, Fenr, Fdash, FepName, FepName1, FepName2, FepName3, FepName4 = Fname.split(" ")
             Ftitle = "{} {} {} {} {}".format(Fhow, Fi, Fmet,Fyour, Fmother)
@@ -45,6 +50,7 @@ for i in os.listdir():
             FeName = "{} {} {} {} {}".format(FepName, FepName1, FepName2, FepName3, FepName4)
             new_name = "{}-{} {}{}".format(Ftitle, FsNReNR, FeName, Fext)
             os.rename(i, new_name)
+        
         else:
             print(Fname + " Does not meet the correct requirements to be handled correcly!")
         
